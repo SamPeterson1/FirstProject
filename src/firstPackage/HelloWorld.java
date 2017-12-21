@@ -12,30 +12,10 @@ public class HelloWorld {
 		try {
 			i = reader.readLine();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		new Recognizer().recognize(i);
-	}
-	
-	public static int add(int a, int b) {
-		int result = a + b;
-		return result;
-	}
-	
-	public static int subtract(int a, int b) {
-		int result = a - b;
-		return result;
-	}
-	
-	public static int multiply(int a, int b) {
-		int result = a * b;
-		return result;
-	}
-	
-	public static int divide(int a, int b) {
-		int result = a / b;
-		return result;
+		
+		System.out.println(new Calculator().calculate(new Recognizer().recognize(i)));
 	}
 	
 }

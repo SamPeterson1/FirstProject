@@ -1,7 +1,7 @@
 package firstPackage;
 
 public class Recognizer {
-	public void recognize(String str) {
+	public int[] recognize(String str) {
 		String[] split = str.split(" ");
 		int[] proccesed = new int[split.length];
 		for(int i = 0; i < split.length; i ++) {
@@ -49,7 +49,7 @@ public class Recognizer {
 					proccesed[i] += exp * i2[i3];
 				}			
 			}
-			System.out.println(proccesed[i]);
 		}
+		return proccesed;
 	}
 }
